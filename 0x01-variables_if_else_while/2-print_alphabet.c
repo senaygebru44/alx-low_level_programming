@@ -9,7 +9,7 @@ int main(void)
 
 	n = 97;
 
-	while (n <= 97)
+	while (n <= 122)
 
 	{
 		putchar('n');
