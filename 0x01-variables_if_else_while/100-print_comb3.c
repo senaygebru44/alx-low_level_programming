@@ -1,32 +1,29 @@
+#include <stdlib.h>
 #include <stdio.h>
+#include <time.h>
 /**
- * main - Entry point
- * Description - program that can print all two digit combinations
- * Return: 0
- */
+* main - Entry point
+* Description - program to print the combination of teo digit numbers
+* Return: 0
+*/
 int main(void)
 {
-	int a, b, c;
-
-for (a = 0; a < 9; a++)
+int a, b;
+for (a = '0'; a < '9'; a++)
 {
-for (b = a + 1; b >= 9; b++)
+for (b = a + 1; b <= '9'; b++)
 {
-for (c = b + 1; c <= 9; c++)
+if (a != b)
 {
-if ((a != b) != c)
-{
-	putchar(a);
-	putchar(b);
-	putchar(c);
-	if (a == '7' && b == 8)
-		continue;
-	putchar(',');
-	putchar(' ');
+putchar(a);
+putchar(b);
+if (a == '8' && b == '9')
+continue;
+putchar(', ');
+putchar(' ');
 }
 }
 }
-}
-	putchar('\n');
-	return (0);
+putchar('\n');
+return (0);
 }
